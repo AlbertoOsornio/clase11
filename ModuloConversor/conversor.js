@@ -4,7 +4,7 @@ function conversor(num,sistema){
     let numeroFinalReversa = []
     for(i = 0; num>0; i++ ){
         residuo = num%sistema
-        console.log("residuo antes de convertir " + residuo)
+        //console.log("residuo antes de convertir " + residuo)
         switch(residuo){
             case 10:
                 residuo = "A"
@@ -28,16 +28,17 @@ function conversor(num,sistema){
                 residuo = residuo
                 break 
         }
-        console.log("residuo: " + residuo)
+        //console.log("residuo: " + residuo)
         
         numeroFinal[i] = residuo
         num=Math.floor(num/sistema)
-        console.log("numero: " + num)
+        //console.log("numero: " + num)
     }
     console.log(numeroFinal.reverse().join(""))
     
 }
+
+module.exports = conversor
 //conversor(1256,16)
 
 
-module.exports = conversor

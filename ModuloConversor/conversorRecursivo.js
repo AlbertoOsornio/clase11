@@ -1,8 +1,10 @@
-import './calculaResiduo.js'
-
+const residuo = require('./calculaResiduo')
+let numeroFinal = []
 function conversorRecursivo(numero,base){
-    let numeroFinal = []
+    //let numeroFinal = []
     let resultado = numero/base
+
+    //console.log(residuo(numero,base))
     if(resultado === 0){
         console.log("0")
     }else{
@@ -12,11 +14,10 @@ function conversorRecursivo(numero,base){
             console.log(numeroFinal.reverse().join(""))
             return 
          }else{
-             numeroFinal.push(calculaResiduoConversion(numero,base))
+             numeroFinal.push(residuo.calculaResiduoConversion(numero,base))
              return conversorRecursivo(resultado,base)
          }
     }
 }
-
-
-conversorRecursivo(1,2)
+module.exports = conversorRecursivo
+//conversorRecursivo(8,2,[])

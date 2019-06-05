@@ -1,2 +1,5 @@
-const conversor = require('./moduloconversor')
+const conversor = require('./ModuloConversor')
+console.log("---------------------NO-RECURSIVO-----------------")
 conversor.convierte(1256,16)
+console.log("---------------------RECURSIVO-----------------")
+conversor.convierteR(1256,16)

@@ -1,6 +1,6 @@
-export function calculaResiduoConversion(residuo,base){
+function calculaResiduoConversion(residuo,base){
     let resultado = residuo%base
-    console.log("modulo: " + resultado)
+    //console.log("modulo: " + resultado)
     let letra = ""
     switch(resultado){
         case 10:
@@ -27,3 +27,5 @@ export function calculaResiduoConversion(residuo,base){
             return letra
     }
 }
+
+module.exports.calculaResiduoConversion = calculaResiduoConversion
